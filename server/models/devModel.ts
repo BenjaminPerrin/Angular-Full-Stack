@@ -2,7 +2,13 @@ import * as mongoose from 'mongoose';
 
 const devSchema = new mongoose.Schema({
   name: String,
-  weight: Number,
+  pays: String,
+  team: String,
+  skills: String,
+  imgPerso: String,
+  imgTeam: String,
+  descT: String,
+  descPerso: String,
   age: Number,
 });
 

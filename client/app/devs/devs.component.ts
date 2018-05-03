@@ -19,8 +19,16 @@ export class DevsComponent implements OnInit {
 
   addDevForm: FormGroup;
   name = new FormControl('', Validators.required);
+  pays = new FormControl('', Validators.required);
+  // weight = new FormControl('', Validators.required);
+  skills = new FormControl('', Validators.required);
+  imgPerso = new FormControl('', Validators.required);
+  imgTeam = new FormControl('', Validators.required);
+  team = new FormControl('', Validators.required);
+  descT = new FormControl('', Validators.required);
+  descPerso = new FormControl('', Validators.required);
   age = new FormControl('', Validators.required);
-  weight = new FormControl('', Validators.required);
+  // age = new FormControl('', Validators.required);
 
   constructor(private devService: DevService,
               private formBuilder: FormBuilder,
@@ -30,8 +38,14 @@ export class DevsComponent implements OnInit {
     this.getDevs();
     this.addDevForm = this.formBuilder.group({
       name: this.name,
+      pays: this.pays,
+      skills: this.skills,
+      team: this.team,
+      descT: this.descT,
+      imgPerso: this.imgPerso,
+      imgTeam: this.imgTeam,
+      descPerso: this.descPerso,
       age: this.age,
-      weight: this.weight,
     });
   }
 
