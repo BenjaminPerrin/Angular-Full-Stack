@@ -14,6 +14,9 @@
           <th scope="col">Desciption</th>
           <th scope="col">Skills</th>
           <th scope="col">Team</th>
+          <th scope="col">Img perso</th>
+          <th scope="col">DescTeam</th>
+          <th scope="col">imgTeam</th>
         </tr>
       </thead>
       <tbody *ngIf="devs.length === 0">
@@ -29,6 +32,9 @@
           <td>{{ dev.descPerso }}</td>
           <td>{{ dev.skills }}</td>
           <td>{{ dev.team }}</td>
+          <td>{{ dev.imgPerso }}</td>
+          <td>{{ dev.descT }}</td>
+          <td>{{ dev.imgTeam }}</td>
           <td>
             <button class="btn btn-sm btn-primary" (click)="enableEditing(dev)">
               <i class="fa fa-pencil"></i> Edit</button>
@@ -66,15 +72,15 @@
   <h4 class="card-header">Add new dev</h4>
   <div class="card-body">
     <form class="form-inline" [formGroup]="addDevForm" (ngSubmit)="addDev()">
-      <input class="form-control mr-2" type="text" name="name" formControlName="name" placeholder="Name" required>
-      <input class="form-control mr-2" type="text" name="imgPerso" formControlName="imgPerso" placeholder="Img_perso" required>
-      <input class="form-control mr-2" type="text" name="pays" formControlName="pays" placeholder="Pays" required>
-      <input class="form-control mr-2" type="text" name="descPerso" formControlName="descPerso" placeholder="Description" required>
-      <input class="form-control mr-2" type="text" name="skills" formControlName="skills" placeholder="Skills" required>
-      <input class="form-control mr-2" type="text" name="team" formControlName="team" placeholder="Team" required>
-      <input class="form-control mr-2" type="text" name="descT" formControlName="descT" placeholder="Desciption team" required>
-      <input class="form-control mr-2" type="text" name="imgTeam" formControlName="imgTeam" placeholder="Img_team" required>
-      <input class="form-control mr-2" type="number" name="age" formControlName="age" placeholder="Age" min="0" required>
+      <input class="form-control mr-1" type="text" name="name" formControlName="name" placeholder="Name" required>
+      <input class="form-control mr-1" type="text" name="imgPerso" formControlName="imgPerso" placeholder="Img_perso" required>
+      <input class="form-control mr-1" type="text" name="pays" formControlName="pays" placeholder="Pays" required>
+      <input class="form-control mr-1" type="text" name="descPerso" formControlName="descPerso" placeholder="Description" required>
+      <input class="form-control mr-1" type="text" name="skills" formControlName="skills" placeholder="Skills" required>
+      <input class="form-control mr-1" type="text" name="team" formControlName="team" placeholder="Team" required>
+      <input class="form-control mr-1" type="text" name="descT" formControlName="descT" placeholder="Desciption team" required>
+      <input class="form-control mr-1" type="text" name="imgTeam" formControlName="imgTeam" placeholder="Img_team" required>
+      <input class="form-control mr-1" type="number" name="age" formControlName="age" placeholder="Age" min="0" required>
       <button class="btn btn-primary" type="submit" [disabled]="!addDevForm.valid">
         <i class="fa fa-floppy-o"></i> Add</button>
     </form>

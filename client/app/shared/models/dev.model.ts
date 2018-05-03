@@ -1,6 +1,12 @@
 export class Dev {
   _id?: string;
   name?: string;
-  weight?: number;
+  pays?: string;
+  team?: string;
+  skills?: string;
+  imgPerso?: string;
+  imgTeam?: string;
+  descT?: string;
+  descPerso?: string;
   age?: number;
 }

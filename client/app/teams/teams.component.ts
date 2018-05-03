@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { DevService } from '../services/dev.service';
 import { Dev } from '../shared/models/dev.model';
-
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
+  selector: 'app-teams',
+  templateUrl: './teams.component.html',
+  styleUrls: ['./teams.component.css'],
 })
-export class AboutComponent implements OnInit {
+export class TeamsComponent implements OnInit {
   dev = new Dev();
   devs: Dev[] = [];
   isLoading = true;
-
   constructor(private devService: DevService) { }
+
   ngOnInit() {
     this.getDevs();
   }
@@ -23,4 +23,7 @@ export class AboutComponent implements OnInit {
     );
   }
 
+  getDevsFromTeam(team: string) {
+    return this.devs.filter(dev => dev.team === team);
+  }
 }
