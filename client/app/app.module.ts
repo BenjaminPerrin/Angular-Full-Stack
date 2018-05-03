@@ -4,12 +4,14 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { RoutingModule } from './routing.module';
 import { SharedModule } from './shared/shared.module';
 import { CatService } from './services/cat.service';
+import { DevService } from './services/dev.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 import { AppComponent } from './app.component';
 import { CatsComponent } from './cats/cats.component';
+import { DevsComponent } from './devs/devs.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -33,6 +35,7 @@ export function tokenGetter() {
     AccountComponent,
     AdminComponent,
     NotFoundComponent,
+    DevsComponent,
   ],
   imports: [
     RoutingModule,
@@ -50,6 +53,7 @@ export function tokenGetter() {
     AuthGuardAdmin,
     CatService,
     UserService,
+    DevService,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
