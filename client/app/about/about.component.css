@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+.carousel {
+  height: 75vh;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+.about {
+  width: 95vw;
+}
+
+.aboutTitle {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to right, #7e7e7e 0%, #9a0606 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutImg {
+  max-width: 25vw;
+}
