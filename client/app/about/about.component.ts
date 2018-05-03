@@ -1,7 +1,6 @@
-import { AfterViewChecked, ChangeDetectorRef, Component } from '@angular/core';
+import { AfterViewChecked, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { AuthService } from './../services/auth.service';
 
-import { Component, OnInit } from '@angular/core';
 import { DevService } from '../services/dev.service';
 import { Dev } from '../shared/models/dev.model';
 
