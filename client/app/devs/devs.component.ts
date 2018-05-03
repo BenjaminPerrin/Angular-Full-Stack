@@ -20,7 +20,6 @@ export class DevsComponent implements OnInit {
   addDevForm: FormGroup;
   name = new FormControl('', Validators.required);
   pays = new FormControl('', Validators.required);
-  // weight = new FormControl('', Validators.required);
   skills = new FormControl('', Validators.required);
   imgPerso = new FormControl('', Validators.required);
   imgTeam = new FormControl('', Validators.required);
@@ -28,7 +27,6 @@ export class DevsComponent implements OnInit {
   descT = new FormControl('', Validators.required);
   descPerso = new FormControl('', Validators.required);
   age = new FormControl('', Validators.required);
-  // age = new FormControl('', Validators.required);
 
   constructor(private devService: DevService,
               private formBuilder: FormBuilder,

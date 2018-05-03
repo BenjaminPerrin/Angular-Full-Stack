@@ -1,21 +1,17 @@
-import { AfterViewChecked, ChangeDetectorRef, Component } from '@angular/core';
-import { AuthService } from './../services/auth.service';
-
 import { Component, OnInit } from '@angular/core';
 import { DevService } from '../services/dev.service';
 import { Dev } from '../shared/models/dev.model';
-
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
+  selector: 'app-teams',
+  templateUrl: './teams.component.html',
+  styleUrls: ['./teams.component.css'],
 })
-export class AboutComponent implements OnInit {
+export class TeamsComponent implements OnInit {
   dev = new Dev();
   devs: Dev[] = [];
   isLoading = true;
+  constructor(private devService: DevService) { }
 
-  constructor(private devService: DevService, public auth: AuthService) { }
   ngOnInit() {
     this.getDevs();
   }
@@ -25,5 +21,9 @@ export class AboutComponent implements OnInit {
       error => console.log(error),
       () => this.isLoading = false,
     );
+  }
+
+  getDevsFromTeam(team: string) {
+    return this.devs.filter(dev => dev.team === team);
   }
 }
