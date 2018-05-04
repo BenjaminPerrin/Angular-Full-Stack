@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body {
+    background: url(https://images.unsplash.com/photo-1465415513839-55341da57a98) no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    float: left;
+    margin: 100px auto;
+    margin-left: 10px;
+    background-color: whitesmoke;
+    position: relative;
+    padding: 10px;
+    width: 480px;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+input textarea {
+    color: #9a0606;
+}
+
+textarea {
+    color: #9a0606;
+}
+
+  .container form {
+    position: relative;
+  }
+  .container label {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+  }
+  .container input {
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 1px solid #9a0606;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    padding: 0 20px;
+    position: relative;
+    outline: 0;
+    margin: 10px 0;
+    width: 100%;
+  }
+  .container input:focus {
+    border: 1px solid #9a0606;
+  }
+  .container .error {
+    border-bottom: 2px solid #9a0606;
+    color: #9a0606;
+  }
+  .container textarea {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #9a0606;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+    height: 130px;
+    margin-top: 10px;
+    padding: 10px 20px 0;
+    resize: none;
+    width: 100%;
+  }
+  .container textarea:focus {
+    border: 1px solid #9a0606;
+  }
+  .container .title {
+    margin-top: 0;
+    text-align: center;
+  }
+  .container .send {
+    background: linear-gradient(to right, #7e7e7e 0%, #9a0606 100%);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px 0;
+    width: 100%;
+  }
+  .container .send:hover {
+    background: linear-gradient(to right, #7e7e7e 0%, #9a0606 100%);
+  }
+  
+  .container1 {
+    background: linear-gradient(to right, #7e7e7e 0%, #9a0606 100%);
+    color: aliceblue;
+    float: left;
+    background-color: whitesmoke;
+    margin: 100px auto;
+    margin-left: 100px;
+    position: relative;
+    padding: 10px;
+    width: 480px;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .container1 label {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+  }
+
+  .container1 .title {
+    margin-top: 0;
+    text-align: center;
+  }
+p {
+    text-align: center;
+}
+
+.map {
+    margin:50px auto;
+    margin-left: 10px;
+    width: 95%;
+    height: 80%;
+  }
+  .container3 {
+    text-align: center;
+    background: linear-gradient(to right, #7e7e7e 0%, #9a0606 100%);
+    color: aliceblue;
+    float: left;
+    background-color: whitesmoke;
+    margin: 100px auto;
+    margin-left: 100px;
+    position: relative;
+    padding: 10px;
+    width: 750px;
+    height: 600px;
+    font-family: 'Orbitron', sans-serif;
+  }
