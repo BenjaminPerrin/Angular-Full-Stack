@@ -21,6 +21,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TeamsComponent } from './teams/teams.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -42,6 +43,7 @@ export function tokenGetter() {
     DevsComponent,
     TeamsComponent,
     ContactComponent,
+    FooterComponent,
   ],
   imports: [
     RoutingModule,

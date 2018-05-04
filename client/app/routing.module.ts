@@ -12,6 +12,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TeamsComponent } from './teams/teams.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'teams', component: TeamsComponent },
   { path: 'devs', component: DevsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'footer', component: FooterComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
