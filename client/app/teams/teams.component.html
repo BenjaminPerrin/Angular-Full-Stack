@@ -1,69 +1,55 @@
-<!-- <tr *ngFor="let dev of devs">
-  <td *ngIf="(dev.team == 'Osefdunom')">{{ dev.name }}</td>
-  <td *ngIf="(dev.team == 'Osefdunom')">{{ dev.age }}</td>
-  <td *ngIf="(dev.team == 'Osefdunom')">{{ dev.pays }}</td>
-  <td *ngIf="(dev.team == 'Osefdunom')">
-    <img src='{{ dev.imgPerso }}' alt="" width="60px" height="60px">
-  </td>
-  <td *ngIf="(dev.team == 'Osefdunom')">{{ dev.skills }}</td>
-  <td *ngIf="(dev.team == 'Osefdunom')">{{ dev.team }}</td>
-  <td *ngIf="(dev.team == 'Osefdunom')">{{ dev.descT }}</td>
-  <td *ngIf="(dev.team == 'Osefdunom')">
-    <img src='{{ dev.imgTeam }}' alt="" width="60px" height="60px">
-  </td>
-</tr> -->
-<div class="container">
+<div class="container teamList">
   <div class="row">
-    <div class="card col-3" style="width: 18rem; height: 20rem;">
+    <div class="card col-3 text-center" style="width: 18rem; height: 20rem;">
       <div class="card-body">
         <img src="{{ devs[4].imgTeam }}" alt="flag" width="225px" height="150px" style="border-style: solid;">
         <h5 class="card-title ">{{ devs[4].team }}</h5>
-        <p class="card-text ">
-          <td>{{ devs[4].descT }}</td>
+        <p class="card-text">
+          {{ devs[4].descT }}
         </p>
-        <a data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary ">infos</a>
+        <a data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary ">Infos</a>
       </div>
     </div>
-    <div class="card col-3" style="width: 18rem; height: 20rem;">
+    <div class="card col-3 text-center" style="width: 18rem; height: 20rem;">
       <div class="card-body">
         <img src="{{ devs[8].imgTeam }}" alt="flag" width="225px" height="150px" style="border-style: solid;">
         <h5 class="card-title ">{{ devs[8].team }}</h5>
-        <p class="card-text ">
-          <td>{{ devs[8].descT }}</td>
+        <p class="card-text">
+          {{ devs[8].descT }}
         </p>
-        <a data-toggle="collapse" data-target="#partOne" aria-expanded="false" aria-controls="partOne" class="btn btn-primary ">infos</a>
+        <a data-toggle="collapse" data-target="#partOne" aria-expanded="false" aria-controls="partOne" class="btn btn-primary ">Infos</a>
       </div>
     </div>
-    <div class="card col-3" style="width: 18rem; height: 20rem;">
+    <div class="card col-3 text-center" style="width: 18rem; height: 20rem;">
       <div class="card-body">
         <img src="{{ devs[12].imgTeam }}" alt="flag" width="225px" height="150px" style="border-style: solid;">
         <h5 class="card-title ">{{ devs[12].team }}</h5>
-        <p class="card-text ">
-          <td>{{ devs[12].descT }}</td>
+        <p class="card-text">
+          {{ devs[12].descT }}
         </p>
-        <a data-toggle="collapse" data-target="#partTwo" aria-expanded="false" aria-controls="partTwo" class="btn btn-primary ">infos</a>
+        <a data-toggle="collapse" data-target="#partTwo" aria-expanded="false" aria-controls="partTwo" class="btn btn-primary ">Infos</a>
       </div>
     </div>
-    <div class="card col-3" style="width: 18rem; height: 20rem;">
+    <div class="card col-3 text-center" style="width: 18rem; height: 20rem;">
       <div class="card-body">
         <img src="{{ devs[16].imgTeam }}" alt="flag" width="225px" height="150px" style="border-style: solid;">
         <h5 class="card-title ">{{ devs[16].team }}</h5>
-        <p class="card-text ">
-          <td>{{ devs[16].descT }}</td>
+        <p class="card-text">
+          {{ devs[16].descT }}
         </p>
-        <a data-toggle="collapse" data-target="#jhonny" aria-expanded="false" aria-controls="jhonny" class="btn btn-primary ">infos</a>
+        <a data-toggle="collapse" data-target="#jhonny" aria-expanded="false" aria-controls="jhonny" class="btn btn-primary ">Infos</a>
       </div>
     </div>
   </div>
   <!-- dévelop -->
   <div class="collapse" id="collapseExample">
-    <div class="row">
+    <div class="row justify-content-center">
       <div *ngFor="let dev of getDevsFromTeam('dévelop*tes') " class="col-3 ">
-        <div class="card " style="width: 16rem; height: 23rem; ">
+        <div class="card text-center" style="width: 16rem; height: 23rem; ">
           <div class="card-body ">
             <img src="{{ dev.imgPerso }} " alt="flag " width="225px " height="225px ">
             <h5 class="card-title ">{{ dev.name }} - {{ dev.age }}ans </h5>
-            <p class="card-text ">
+            <p class="card-text">
               {{ dev.descPerso }}
               <br/>
             </p>
@@ -74,13 +60,13 @@
   </div>
   <!-- PartOne -->
   <div class="collapse" id="partOne">
-    <div class="row">
+    <div class="row justify-content-center">
       <div *ngFor="let dev of getDevsFromTeam('Part One') " class="col-3 ">
-        <div class="card" style="width: 16rem; height: 23rem; ">
+        <div class="card text-center" style="width: 16rem; height: 23rem; ">
           <div class="card-body ">
             <img src="{{ dev.imgPerso }} " alt="flag " width="225px " height="225px ">
             <h5 class="card-title ">{{ dev.name }} - {{ dev.age }}ans </h5>
-            <p class="card-text ">
+            <p class="card-text">
               {{ dev.descPerso }}
               <br/>
             </p>
@@ -91,13 +77,13 @@
   </div>
   <!-- PartTwo -->
   <div class="collapse" id="partTwo">
-    <div class="row">
+    <div class="row justify-content-center">
       <div *ngFor="let dev of getDevsFromTeam('Part Two') " class="col-3 ">
-        <div class="card " style="width: 16rem; height: 23rem; ">
+        <div class="card text-center" style="width: 16rem; height: 23rem; ">
           <div class="card-body ">
             <img src="{{ dev.imgPerso }} " alt="flag " width="225px " height="225px ">
             <h5 class="card-title ">{{ dev.name }} - {{ dev.age }}ans </h5>
-            <p class="card-text ">
+            <p class="card-text">
               {{ dev.descPerso }}
               <br/>
             </p>
@@ -110,11 +96,11 @@
   <div class="collapse" id="jhonny">
     <div class="row">
       <div *ngFor="let dev of getDevsFromTeam('Jhonny Raquette') " class="col-3 ">
-        <div class="card " style="width: 16rem; height: 23rem; ">
+        <div class="card text-center" style="width: 16rem; height: 23rem; ">
           <div class="card-body ">
             <img src="{{ dev.imgPerso }} " alt="flag " width="225px " height="225px ">
             <h5 class="card-title ">{{ dev.name }} - {{ dev.age }}ans </h5>
-            <p class="card-text ">
+            <p class="card-text">
               {{ dev.descPerso }}
               <br/>
             </p>
@@ -125,44 +111,44 @@
   </div>
 
   <div class="row ">
-    <div class="card col-3 " style="width: 18rem; height: 20rem; ">
+    <div class="card col-3 text-center " style="width: 18rem; height: 20rem; ">
       <div class="card-body ">
         <img src="{{ devs[20].imgTeam }} " alt="flag " width="225px " height="150px " style="border-style: solid;">
         <h5 class="card-title ">{{ devs[20].team }}</h5>
-        <p class="card-text ">
-          <td>{{ devs[20].descT }}</td>
+        <p class="card-text">
+          {{ devs[20].descT }}
         </p>
-        <a data-toggle="collapse" data-target="#LAMA" aria-expanded="false" aria-controls="LAMA" class="btn btn-primary ">infos</a>
+        <a data-toggle="collapse" data-target="#LAMA" aria-expanded="false" aria-controls="LAMA" class="btn btn-primary ">Infos</a>
       </div>
     </div>
-    <div class="card col-3 " style="width: 18rem; height: 20rem; ">
+    <div class="card col-3 text-center " style="width: 18rem; height: 20rem; ">
       <div class="card-body ">
         <img src="{{ devs[24].imgTeam }} " alt="flag " width="225px " height="150px " style="border-style: solid;">
         <h5 class="card-title ">{{ devs[24].team }}</h5>
-        <p class="card-text ">
-          <td>{{ devs[24].descT }}</td>
+        <p class="card-text">
+          {{ devs[24].descT }}
         </p>
-        <a data-toggle="collapse" data-target="#devpool" aria-expanded="false" aria-controls="devpool" class="btn btn-primary ">infos</a>
+        <a data-toggle="collapse" data-target="#devpool" aria-expanded="false" aria-controls="devpool" class="btn btn-primary ">Infos</a>
       </div>
     </div>
-    <div class="card col-3 " style="width: 18rem; height: 20rem; ">
+    <div class="card col-3 text-center " style="width: 18rem; height: 20rem; ">
       <div class="card-body ">
         <img src="{{ devs[28].imgTeam }} " alt="flag " width="225px " height="150px " style="border-style: solid;">
         <h5 class="card-title ">{{ devs[28].team }}</h5>
-        <p class="card-text ">
-          <td>{{ devs[28].descT }}</td>
+        <p class="card-text">
+          {{ devs[28].descT }}
         </p>
-        <a data-toggle="collapse" data-target="#Name" aria-expanded="false" aria-controls="Name" class="btn btn-primary ">infos</a>
+        <a data-toggle="collapse" data-target="#Name" aria-expanded="false" aria-controls="Name" class="btn btn-primary ">Infos</a>
       </div>
     </div>
-    <div class="card col-3 " style="width: 18rem; height: 20rem; ">
+    <div class="card col-3 text-center " style="width: 18rem; height: 20rem; ">
       <div class="card-body ">
         <img src="{{ devs[1].imgTeam }} " alt="flag " width="225px " height="150px " style="border-style: solid;">
         <h5 class="card-title ">{{ devs[1].team }}</h5>
-        <p class="card-text ">
-          <td>{{ devs[1].descT }}</td>
+        <p class="card-text">
+          {{ devs[1].descT }}
         </p>
-        <a data-toggle="collapse" data-target="#Osefdunom" aria-expanded="false" aria-controls="Osefdunom" class="btn btn-primary ">infos</a>
+        <a data-toggle="collapse" data-target="#Osefdunom" aria-expanded="false" aria-controls="Osefdunom" class="btn btn-primary ">Infos</a>
       </div>
     </div>
   </div>
@@ -170,11 +156,11 @@
   <div class="collapse" id="LAMA">
     <div class="row">
       <div *ngFor="let dev of getDevsFromTeam('La Team LAMA') " class="col-3 ">
-        <div class="card " style="width: 16rem; height: 23rem; ">
+        <div class="card text-center" style="width: 16rem; height: 23rem; ">
           <div class="card-body ">
             <img src="{{ dev.imgPerso }} " alt="flag " width="225px " height="225px ">
             <h5 class="card-title ">{{ dev.name }} - {{ dev.age }}ans </h5>
-            <p class="card-text ">
+            <p class="card-text">
               {{ dev.descPerso }}
               <br/>
             </p>
@@ -187,11 +173,11 @@
   <div class="collapse" id="devpool">
     <div class="row">
       <div *ngFor="let dev of getDevsFromTeam('devpool') " class="col-3 ">
-        <div class="card" style="width: 16rem; height: 23rem; ">
+        <div class="card text-center" style="width: 16rem; height: 23rem; ">
           <div class="card-body ">
             <img src="{{ dev.imgPerso }} " alt="flag " width="225px " height="225px ">
             <h5 class="card-title ">{{ dev.name }} - {{ dev.age }}ans </h5>
-            <p class="card-text ">
+            <p class="card-text">
               {{ dev.descPerso }}
               <br/>
             </p>
@@ -204,11 +190,11 @@
   <div class="collapse" id="Name">
     <div class="row">
       <div *ngFor="let dev of getDevsFromTeam('no Name') " class="col-3 ">
-        <div class="card " style="width: 16rem; height: 23rem; ">
+        <div class="card text-center" style="width: 16rem; height: 23rem; ">
           <div class="card-body ">
             <img src="{{ dev.imgPerso }} " alt="flag " width="225px " height="225px ">
             <h5 class="card-title ">{{ dev.name }} - {{ dev.age }}ans </h5>
-            <p class="card-text ">
+            <p class="card-text">
               {{ dev.descPerso }}
               <br/>
             </p>
@@ -221,11 +207,11 @@
   <div class="collapse" id="Osefdunom">
     <div class="row">
       <div *ngFor="let dev of getDevsFromTeam('Osefdunom') " class="col-3 ">
-        <div class="card " style="width: 16rem; height: 23rem; ">
+        <div class="card text-center" style="width: 16rem; height: 23rem; ">
           <div class="card-body ">
             <img src="{{ dev.imgPerso }} " alt="flag " width="225px " height="225px ">
             <h5 class="card-title ">{{ dev.name }} - {{ dev.age }}ans </h5>
-            <p class="card-text ">
+            <p class="card-text">
               {{ dev.descPerso }}
               <br/>
             </p>
@@ -235,3 +221,5 @@
     </div>
   </div>
 </div>
+<br/>
+<br/>

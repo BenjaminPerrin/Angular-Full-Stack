@@ -107,6 +107,7 @@ hr {
 .news_text {
   font-family: 'Orbitron', sans-serif;
   color: #7e7e7e;
+  margin-top: 25px;
 }
 
 .news_form {
