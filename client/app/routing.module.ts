@@ -13,6 +13,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { TeamsComponent } from './teams/teams.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { BracketComponent } from './bracket/bracket.component';
+import { ChallengeComponent } from './challenge/challenge.component';
 
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
@@ -20,11 +22,13 @@ import { AuthGuardAdmin } from './services/auth-guard-admin.service';
 const routes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'cats', component: CatsComponent },
+  { path: 'bracket', component: BracketComponent },
   { path: 'teams', component: TeamsComponent },
   { path: 'devs', component: DevsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'challenge', component: ChallengeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'account', component: AccountComponent, canActivate: [AuthGuardLogin] },

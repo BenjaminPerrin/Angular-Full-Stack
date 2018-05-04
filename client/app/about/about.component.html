@@ -1,5 +1,14 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide d-none d-md-block" data-ride="carousel">
   <div class="carousel-inner">
+    <div class="carouselOverlay text-center">
+      <div class="caroverlayText">
+        Next Challenge in :
+        <br/>
+        <div class="timer">
+          <countdown-timer [end]="'2018-05-05 10:00:00'"></countdown-timer>
+        </div>
+      </div>
+    </div>
     <div class="carousel-item active">
       <img class="d-block w-100" src="./assets/slide1.jpg" alt="First slide">
     </div>
@@ -10,28 +19,135 @@
       <img class="d-block w-100" src="./assets/slide3.jpg" alt="Third slide">
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
+
+<hr>
 
 <div id="about" class="about container-fluid justify-content-center">
   <div class="row justify-content-center text-center">
-    <h2 class="aboutTitle">
+    <h2 class="bodyTitle">
       < About />
     </h2>
   </div>
+  <hr>
   <div class="row justify-content-center">
-    <div class="col-4">
+    <div class="col-4 d-none d-md-block">
       <img src="./assets/haka.gif" class="aboutImg">
     </div>
-    <div class="col-8">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    <div class="col-12 col-md-4">
+      The GBG DEV TOURNAMENT is a competition for developers from all around the World.
+      <hr> During the intensive 3 days, teams compete in a variety of challenges and mind-twisting algorithm problems. The competition
+      is based on matches between two teams, winner goes to the next challenge, looser goes home.
     </div>
+    <div class="col-12 col-md-4 text-center">
+      The
+      <span class='strong'>Grand Winner</span> will not only walk out cheered and covered in glory, but the team will also win a
+      <br/>
+      <span class='cash'>$100.000 cash prize</span> !
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div id="gallery" class="news container-fluid justify-content-center">
+  <div class="row justify-content-center text-center">
+    <h2 class="bodyTitle">
+      < Gallery />
+    </h2>
+  </div>
+  <hr>
+  <div class="row text-center justify-content-center">
+    <div class='col-6 col-md-3'>
+      <div class="newsContainer">
+        <img src="http://via.placeholder.com/350x150" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+    <div class='col-6 col-md-3'>
+      <div class="newsContainer">
+        <img src="http://via.placeholder.com/350x150" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+    <div class='col-6 col-md-3'>
+      <div class="newsContainer">
+        <img src="http://via.placeholder.com/350x150" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+    <div class='col-6 col-md-3'>
+      <div class="newsContainer">
+        <img src="http://via.placeholder.com/350x150" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center justify-content-center">
+    <div class='col-6 col-md-3'>
+      <div class="newsContainer">
+        <img src="http://via.placeholder.com/350x150" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+    <div class='col-6 col-md-3'>
+      <div class="newsContainer">
+        <img src="http://via.placeholder.com/350x150" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+    <div class='col-6 col-md-3'>
+      <div class="newsContainer">
+        <img src="http://via.placeholder.com/350x150" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+    <div class='col-6 col-md-3'>
+      <div class="newsContainer">
+        <img src="http://via.placeholder.com/350x150" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text">Hello World</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div id="newsletter" class="newsletter container-fluid justify-content-center">
+  <div class="row justify-content-center text-center">
+    <h2 class="bodyTitle">
+      < Newsletter />
+    </h2>
+  </div>
+  <hr>
+  <div class="row justify-content-center news_text">
+    <div class="col-10 col-md-10 text-center">
+      <h2>Subscribe to our Newsletter</h2>
+      <p>Stay up to date with the event.</p>
+    </div>
+  </div>
+  <div class="row justify-content-center text-center news_form">
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <input type="email" class="form-control-lg" placeholder="Email">
+      </div>
+      <button type="submit" class="btn mb-2 btn-primary btn-lg news_btn">Submit</button>
+    </form>
   </div>
 </div>
