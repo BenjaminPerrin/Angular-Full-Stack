@@ -6,6 +6,12 @@
 
 .card {
   background-color: whitesmoke;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  background-color: grey;
+  border-color: orange;
 }
 
 .card-title {
