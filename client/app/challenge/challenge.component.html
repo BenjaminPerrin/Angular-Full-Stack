@@ -1,194 +1,199 @@
-<div class="accordion" id="accordion">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Challenge #1 Day #1
-        </button>
-      </h5>
-    </div>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="accordion" id="accordion">
+      <div class="card">
+        <div class="card-header text-center" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Challenge #1 Day #1
+            </button>
+          </h5>
+        </div>
 
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-      <div class="card-body">
-        You are provided with:
-        <pre><code data-language="javascript">let $ = 'CSg';</code></pre> You need to change
-        <code>$</code> into a function that returns the string
-        <code>'Hello, world!'</code>.
-        <br/>Requirements:
-        <ul>
-          <li> Every line must have at most
-            <code>1</code> ASCII character </li>
-          <li>You are only allowed to use numbers (0-9) and special characters (!+
-            <[, etc.)</li>
-              <li>NO LETTERS ALLOWED (a-z)! Mwhahaha</li>
-              <li>NO UNICODE CHARACTERS 700 lines or less</li>
-        </ul>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            You are provided with:
+            <pre><code data-language="javascript">let $ = 'CSg';</code></pre> You need to change
+            <code>$</code> into a function that returns the string
+            <code>'Hello, world!'</code>.
+            <br/>Requirements:
+            <ul>
+              <li> Every line must have at most
+                <code>1</code> ASCII character </li>
+              <li>You are only allowed to use numbers (0-9) and special characters (!+
+                <[, etc.)</li>
+                  <li>NO LETTERS ALLOWED (a-z)! Mwhahaha</li>
+                  <li>NO UNICODE CHARACTERS 700 lines or less</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-          aria-controls="collapseTwo">
-          Challenge #1 Day #2
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-      <div class="card-body">
+      <div class="card">
+        <div class="card-header text-center" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+              aria-controls="collapseTwo">
+              Challenge #1 Day #2
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
 
-        In this kata your task is to differentiate a mathematical expression given as a string in prefix notation. The result should
-        be the derivative of the expression returned in prefix notation. To simplify things we will use a simple list format
-        made up of parentesis and spaces. The expression format is (func arg1) or (op arg1 arg2) where op means operator,
-        func means function and arg1, arg2 are aguments to the operator or function. For example (+ x 1) or (cos x) The expressions
-        will always have balanced parentesis and with spaces between list items. Expression operators, functions and arguments
-        will all be lowercase. Expressions are single variable expressions using x as the variable. Expressions can have
-        nested arguments at any depth for example
-        <code>(+ (* 1 x) (* 2 (+ x 1)))</code> Examples of prefix notation in this format:
-        <pre><code data-language="javascript">
+            In this kata your task is to differentiate a mathematical expression given as a string in prefix notation. The result should
+            be the derivative of the expression returned in prefix notation. To simplify things we will use a simple list
+            format made up of parentesis and spaces. The expression format is (func arg1) or (op arg1 arg2) where op means
+            operator, func means function and arg1, arg2 are aguments to the operator or function. For example (+ x 1) or
+            (cos x) The expressions will always have balanced parentesis and with spaces between list items. Expression operators,
+            functions and arguments will all be lowercase. Expressions are single variable expressions using x as the variable.
+            Expressions can have nested arguments at any depth for example
+            <code>(+ (* 1 x) (* 2 (+ x 1)))</code> Examples of prefix notation in this format:
+            <pre><code data-language="javascript">
             (+ x 2) // prefix notation version of x+2
             (* (+ x 3) 5)  // same as 5 * (x + 3) 
             (cos (+ x 1))  // same as cos(x+1) 
             (^ x 2)        // same as x^2 meaning x raised to power of 2</code></pre> The operators and functions you are required to implement are
-        <code>+ - * / ^ cos sin tan exp ln</code> where
-        <code>^</code> means raised to power of.
-        <code>exp</code> is the exponential function (same as e^x) and
-        <code>ln</code> is the natural logarithm (base e). Example of input values and their derivatives:
-        <pre><code data-language="javascript">
+            <code>+ - * / ^ cos sin tan exp ln</code> where
+            <code>^</code> means raised to power of.
+            <code>exp</code> is the exponential function (same as e^x) and
+            <code>ln</code> is the natural logarithm (base e). Example of input values and their derivatives:
+            <pre><code data-language="javascript">
               (* 1 x) => 1
               (^ x 3) => (* 3 (^ x 2))
               (cos x) => (* (sin x) -1)
-          </code></pre> In addition to returning the derivative your solution must also do some simplifications of the result but only what
-        is specified below.
-        <br/>
-        <ul>
-          <li>The returned expression should not have unecessary 0 or 1 factors. For example it should not return (* 1 (+ x 1))
-            but simply the term (+ x 1) similarly it should not return (* 0 (+ x 1)) instead it should return just 0
-          </li>
-          <li>Results with two constant values such as for example (+ 2 2) should be evaluated and returned as a single value
-            4.
-          </li>
-          <li>Any argument raised to the zero power should return 1 and if raised to 1 should return the same value or variable.
-            For example (^ x 0) should return 1 and (^ x 1) should return x</li>
-        </ul>
-        Think recursively and build your answer according to the rules of derivation.
+          </code></pre> In addition to returning the derivative your solution must also do some simplifications of the result but only
+            what is specified below.
+            <br/>
+            <ul>
+              <li>The returned expression should not have unecessary 0 or 1 factors. For example it should not return (* 1 (+
+                x 1)) but simply the term (+ x 1) similarly it should not return (* 0 (+ x 1)) instead it should return just
+                0
+              </li>
+              <li>Results with two constant values such as for example (+ 2 2) should be evaluated and returned as a single value
+                4.
+              </li>
+              <li>Any argument raised to the zero power should return 1 and if raised to 1 should return the same value or variable.
+                For example (^ x 0) should return 1 and (^ x 1) should return x</li>
+            </ul>
+            Think recursively and build your answer according to the rules of derivation.
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-          aria-controls="collapseThree">
-          Challenge #2 Day #2
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-      <div class="card-body">
-        we want to create an interpreter of that language which will support the following instructions (the machine memory or 'data'
-        should behave like a potentially infinite array of bytes, initialized to 0):
-        <ul>
-          <li>
-            <code>></code> increment the data pointer (to point to the next cell to the right).</li>
-          <li>
-            <code><</code> decrement the data pointer (to point to the next cell to the left).</li>
-          <li>
-            <code>+</code> increment (increase by one, truncate overflow: 255 + 1 = 0) the byte at the data pointer.</li>
-          <li>
-            <code>-</code> decrement (decrease by one, treat as unsigned byte: 0 - 1 = 255 ) the byte at the data pointer.</li>
-          <li>
-            <code>.</code> output the byte at the data pointer.</li>
-          <li>
-            <code>,</code> accept one byte of input, storing its value in the byte at the data pointer.</li>
-          <li>
-            <code>[</code> if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next
-            command, jump it forward to the command after the matching ] command.</li>
-          <li>
-            <code>]</code> if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next
-            command, jump it back to the command after the matching [ command.</li>
-        </ul>
-        The function will take in input...
-        <br/>
-        <ul>
-          <li>the program code, a string with the sequence of machine instructions,</li>
-          <li>the program input, a string, eventually empty, that will be interpreted as an array of bytes using each character's
-            ASCII code and will be consumed by the
-            <code>,</code> instruction</li>
-        </ul>
-        ... and will return ...
-        <br/> the output of the interpreted code (always as a string), produced by the
-        <code>.</code> instruction.
-
+      <div class="card">
+        <div class="card-header text-center" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+              aria-controls="collapseThree">
+              Challenge #2 Day #2
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            we want to create an interpreter of that language which will support the following instructions (the machine memory or 'data'
+            should behave like a potentially infinite array of bytes, initialized to 0):
+            <ul>
+              <li>
+                <code>></code> increment the data pointer (to point to the next cell to the right).</li>
+              <li>
+                <code>
+                  <</code> decrement the data pointer (to point to the next cell to the left).</li>
+              <li>
+                <code>+</code> increment (increase by one, truncate overflow: 255 + 1 = 0) the byte at the data pointer.</li>
+              <li>
+                <code>-</code> decrement (decrease by one, treat as unsigned byte: 0 - 1 = 255 ) the byte at the data pointer.</li>
+              <li>
+                <code>.</code> output the byte at the data pointer.</li>
+              <li>
+                <code>,</code> accept one byte of input, storing its value in the byte at the data pointer.</li>
+              <li>
+                <code>[</code> if the byte at the data pointer is zero, then instead of moving the instruction pointer forward
+                to the next command, jump it forward to the command after the matching ] command.</li>
+              <li>
+                <code>]</code> if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward
+                to the next command, jump it back to the command after the matching [ command.</li>
+            </ul>
+            The function will take in input...
+            <br/>
+            <ul>
+              <li>the program code, a string with the sequence of machine instructions,</li>
+              <li>the program input, a string, eventually empty, that will be interpreted as an array of bytes using each character's
+                ASCII code and will be consumed by the
+                <code>,</code> instruction</li>
+            </ul>
+            ... and will return ...
+            <br/> the output of the interpreted code (always as a string), produced by the
+            <code>.</code> instruction.
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingFour">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
-            aria-controls="collapseFour">
-            Challenge #3 Day #2
-          </button>
-        </h5>
-      </div>
-      <div id="collapseFour" class="collapse" aria-labelledby="collapseFour" data-parent="#accordion">
-        <div class="card-body">
-          One man (lets call him Eulampy) has a collection of some almost identical Fabergè eggs. One day his friend Tempter said to
-          him:
-          <ul>
-            <li>Do you see that skyscraper? And can you tell me a maximal floor that if you drop your egg from will not crack
-              it?
-            </li>
-            <li>
-              No, - said Eulampy.</li>
-            <li>
-              But if you give me N eggs, - says Tempter - I'l tell you an answer.</li>
-            <li>
-              Deal - said Eulampy. But I have one requirement before we start this: if I will see more than M falls of egg, my heart will
-              be crushed instead of egg. So you have only M trys to throw eggs. Would you tell me an exact floor with this
-              limitation?
-            </li>
-          </ul>
-          <h3>Task</h3>
-          <br/> Your task is to help Tempter - write a function
-          <br/>
-          <pre><code data-language="javascript">
+      <div class="card">
+        <div class="card-header text-center" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+              aria-controls="collapseFour">
+              Challenge #3 Day #2
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="collapseFour" data-parent="#accordion">
+          <div class="card-body">
+            One man (lets call him Eulampy) has a collection of some almost identical Fabergè eggs. One day his friend Tempter said to
+            him:
+            <ul>
+              <li>Do you see that skyscraper? And can you tell me a maximal floor that if you drop your egg from will not crack
+                it?
+              </li>
+              <li>
+                No, - said Eulampy.</li>
+              <li>
+                But if you give me N eggs, - says Tempter - I'l tell you an answer.</li>
+              <li>
+                Deal - said Eulampy. But I have one requirement before we start this: if I will see more than M falls of egg, my heart will
+                be crushed instead of egg. So you have only M trys to throw eggs. Would you tell me an exact floor with this
+                limitation?
+              </li>
+            </ul>
+            <h3>Task</h3>
+            <br/> Your task is to help Tempter - write a function
+            <br/>
+            <pre><code data-language="javascript">
               height :: Integer -> Integer -> Integer
               height n m = -- see text</code></pre> that takes 2 arguments - the number of eggs n and the number of trys m - you should calculate maximum scyscrapper
-          height (in floors), in which it is guaranteed to find an exactly maximal floor from which that an egg won't crack
-          it.
-          <br/> Which means,
-          <br/>
-          <ol>
-            <li>You can throw an egg from a specific floor every try</li>
-            <li>Every egg has the same, certain durability - if they're thrown from a certain floor or below, they won't crack.
-              Otherwise they crack</li>
-            <li>You have
-              <code>n</code> eggs and
-              <code>m</code> tries</li>
-            <li>What is the maxmimum height, such that you can always determine which floor the target floor is when the target
-              floor can be any floor between
-              <code>1</code> to this maximum height?</li>
-          </ol>
-          <h3>Examples</h3>
-          <br/>
-          <pre><code data-language="javascript">
+            height (in floors), in which it is guaranteed to find an exactly maximal floor from which that an egg won't crack
+            it.
+            <br/> Which means,
+            <br/>
+            <ol>
+              <li>You can throw an egg from a specific floor every try</li>
+              <li>Every egg has the same, certain durability - if they're thrown from a certain floor or below, they won't crack.
+                Otherwise they crack</li>
+              <li>You have
+                <code>n</code> eggs and
+                <code>m</code> tries</li>
+              <li>What is the maxmimum height, such that you can always determine which floor the target floor is when the target
+                floor can be any floor between
+                <code>1</code> to this maximum height?</li>
+            </ol>
+            <h3>Examples</h3>
+            <br/>
+            <pre><code data-language="javascript">
             height 0 14 = 0
             height 2 0  = 0
             height 2 14 = 105
             height 7 20 = 137979
           </code></pre>
-          <h3>Data range</h3>
-          <br/>
-          <pre><code data-language="javascript">
+            <h3>Data range</h3>
+            <br/>
+            <pre><code data-language="javascript">
               n <= 20000
               m <= 20000
           </code></pre>
+          </div>
         </div>
       </div>
       <div class="card">
-        <div class="card-header" id="headingFour">
+        <div class="card-header text-center" id="headingFive">
           <h5 class="mb-0">
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
               aria-controls="collapseFive">
@@ -210,7 +215,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header" id="headingSix">
+        <div class="card-header text-center" id="headingSix">
           <h5 class="mb-0">
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSixe" aria-expanded="false"
               aria-controls="collapseSixe">
@@ -252,7 +257,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header" id="headingSeven">
+        <div class="card-header text-center" id="headingSeven">
           <h5 class="mb-0">
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false"
               aria-controls="collapseSeven">
@@ -314,7 +319,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header" id="headingheight">
+        <div class="card-header text-center" id="headingheight">
           <h5 class="mb-0">
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseHeight" aria-expanded="false"
               aria-controls="collapseHeight">
@@ -329,7 +334,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-header" id="headingNine">
+        <div class="card-header text-center" id="headingNine">
           <h5 class="mb-0">
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNive" aria-expanded="false"
               aria-controls="collapseNive">

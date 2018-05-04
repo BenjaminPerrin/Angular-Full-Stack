@@ -12,6 +12,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TeamsComponent } from './teams/teams.component';
 import { BracketComponent } from './bracket/bracket.component';
+import { ChallengeComponent } from './challenge/challenge.component';
 
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'teams', component: TeamsComponent },
   { path: 'devs', component: DevsComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'challenge', component: ChallengeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'account', component: AccountComponent, canActivate: [AuthGuardLogin] },
