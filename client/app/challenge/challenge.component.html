@@ -13,7 +13,7 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
             You are provided with:
-            <pre><code data-language="javascript">let $ = 'CSg';</code></pre> You need to change
+            <textarea highlight-js [options]="{}" [lang]="'typescript'">let $ = 'CSg';</textarea> You need to change
             <code>$</code> into a function that returns the string
             <code>'Hello, world!'</code>.
             <br/>Requirements:
@@ -48,20 +48,20 @@
             functions and arguments will all be lowercase. Expressions are single variable expressions using x as the variable.
             Expressions can have nested arguments at any depth for example
             <code>(+ (* 1 x) (* 2 (+ x 1)))</code> Examples of prefix notation in this format:
-            <pre><code data-language="javascript">
+            <textarea highlight-js [options]="{}" [lang]="'typescript'">
             (+ x 2) // prefix notation version of x+2
             (* (+ x 3) 5)  // same as 5 * (x + 3) 
             (cos (+ x 1))  // same as cos(x+1) 
-            (^ x 2)        // same as x^2 meaning x raised to power of 2</code></pre> The operators and functions you are required to implement are
+            (^ x 2)        // same as x^2 meaning x raised to power of 2</textarea> The operators and functions you are required to implement are
             <code>+ - * / ^ cos sin tan exp ln</code> where
             <code>^</code> means raised to power of.
             <code>exp</code> is the exponential function (same as e^x) and
             <code>ln</code> is the natural logarithm (base e). Example of input values and their derivatives:
-            <pre><code data-language="javascript">
+            <textarea highlight-js [options]="{}" [lang]="'typescript'">
               (* 1 x) => 1
               (^ x 3) => (* 3 (^ x 2))
               (cos x) => (* (sin x) -1)
-          </code></pre> In addition to returning the derivative your solution must also do some simplifications of the result but only
+          </textarea> In addition to returning the derivative your solution must also do some simplifications of the result but only
             what is specified below.
             <br/>
             <ul>
@@ -107,11 +107,11 @@
               <li>
                 <code>,</code> accept one byte of input, storing its value in the byte at the data pointer.</li>
               <li>
-                <code>[</code> if the byte at the data pointer is zero, then instead of moving the instruction pointer forward
-                to the next command, jump it forward to the command after the matching ] command.</li>
+                <code>[</code> if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next
+                command, jump it forward to the command after the matching ] command.</li>
               <li>
-                <code>]</code> if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward
-                to the next command, jump it back to the command after the matching [ command.</li>
+                <code>]</code> if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the
+                next command, jump it back to the command after the matching [ command.</li>
             </ul>
             The function will take in input...
             <br/>
@@ -157,9 +157,9 @@
             <h3>Task</h3>
             <br/> Your task is to help Tempter - write a function
             <br/>
-            <pre><code data-language="javascript">
+            <textarea highlight-js [options]="{}" [lang]="'typescript'">
               height :: Integer -> Integer -> Integer
-              height n m = -- see text</code></pre> that takes 2 arguments - the number of eggs n and the number of trys m - you should calculate maximum scyscrapper
+              height n m = -- see text</textarea> that takes 2 arguments - the number of eggs n and the number of trys m - you should calculate maximum scyscrapper
             height (in floors), in which it is guaranteed to find an exactly maximal floor from which that an egg won't crack
             it.
             <br/> Which means,
@@ -177,18 +177,18 @@
             </ol>
             <h3>Examples</h3>
             <br/>
-            <pre><code data-language="javascript">
+            <textarea highlight-js [options]="{}" [lang]="'typescript'">
             height 0 14 = 0
             height 2 0  = 0
             height 2 14 = 105
             height 7 20 = 137979
-          </code></pre>
+          </textarea>
             <h3>Data range</h3>
             <br/>
-            <pre><code data-language="javascript">
+            <textarea highlight-js [options]="{}" [lang]="'typescript'">
               n <= 20000
               m <= 20000
-          </code></pre>
+          </textarea>
           </div>
         </div>
       </div>
@@ -241,8 +241,8 @@
             <h3>Task</h3>
             <br/>
             <h6>Create</h6>
-            <pre><code data-language="javascript">function solvePuzzle(clues)
-              </code></pre> Clues are passed in as an Array(28) of
+            <textarea highlight-js [options]="{}" [lang]="'typescript'">function solvePuzzle(clues)
+              </textarea> Clues are passed in as an Array(28) of
             <code>integers</code>.
             <br/> The return value is an
             <code>Array(7)</code> of
@@ -289,7 +289,7 @@
             <br/> Given m, n, l and t, please find the number of seconds the Elder has received, represented in the poor programmer's
             date-time system.
             <h3>Example:</h3>
-            <pre><code data-language="javascript">
+            <textarea highlight-js [options]="{}" [lang]="'typescript'">
                 m=8, n=5, l=1, t=100
 
                 Let's draw out the whole magic rectangle:
@@ -311,7 +311,7 @@
                 Because the system can only store time between 0 to 99 seconds, 
                 the first 100 seconds of time will be lost, giving the answer of 5.
                 
-            </code></pre> Clues are passed in as an Array(28) of
+            </textarea> Clues are passed in as an Array(28) of
             <br/> This is no ordinary magic (the Elder's life is at stake), so you need to care about performance. All test cases
             (900 tests) can be passed within 1 second, but naive solutions will time out easily. Good luck, and do not displease
             the Elder.

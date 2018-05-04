@@ -26,6 +26,7 @@ import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { BracketComponent } from './bracket/bracket.component';
 import { ChallengeComponent } from './challenge/challenge.component';
 import { AgmCoreModule } from '@agm/core';
+import { HighlightJsModule } from 'ngx-highlight-js';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -50,6 +51,7 @@ export function tokenGetter() {
     ChallengeComponent,
   ],
   imports: [
+    HighlightJsModule,
     RoutingModule,
     SharedModule,
     JwtModule.forRoot({
