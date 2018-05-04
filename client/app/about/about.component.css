@@ -2,7 +2,7 @@
 .carousel {
   height: 75vh;
   overflow: hidden;
-  opacity: 0.5;
+  /* opacity: 0.5; */
 }
 
 .about {
@@ -45,7 +45,7 @@ hr {
 
 .carouselOverlay {
   background: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: whitesmoke;
   position: absolute;
   top: 0;
   left: 0;
