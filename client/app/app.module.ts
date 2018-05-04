@@ -20,6 +20,7 @@ import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TeamsComponent } from './teams/teams.component';
+import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { BracketComponent } from './bracket/bracket.component';
 import { ChallengeComponent } from './challenge/challenge.component';
 
@@ -53,6 +54,7 @@ export function tokenGetter() {
         // whitelistedDomains: ['localhost:3000', 'localhost:4200']
       },
     }),
+    CountdownTimerModule.forRoot(),
   ],
   providers: [
     AuthService,
