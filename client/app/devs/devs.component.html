@@ -1,0 +1,88 @@
+<app-loading [condition]="isLoading"></app-loading>
+
+<app-toast [message]="toast.message"></app-toast>
+
+<div class="card mb-3" *ngIf="!isLoading">
+  <h4 class="card-header">Current devs ({{ devs.length }})</h4>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Pays</th>
+          <th scope="col">Desciption</th>
+          <th scope="col">Skills</th>
+          <th scope="col">Team</th>
+          <th scope="col">Img perso</th>
+          <th scope="col">DescTeam</th>
+          <th scope="col">imgTeam</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="devs.length === 0">
+        <tr>
+          <td colspan="4">There are no devs in the DB. Add a new dev below.</td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="!isEditing">
+        <tr *ngFor="let dev of devs">
+          <td>{{ dev.name }}</td>
+          <td>{{ dev.age }}</td>
+          <td>{{ dev.pays }}</td>
+          <td>{{ dev.descPerso }}</td>
+          <td>{{ dev.skills }}</td>
+          <td>{{ dev.team }}</td>
+          <td>{{ dev.imgPerso }}</td>
+          <td>{{ dev.descT }}</td>
+          <td>{{ dev.imgTeam }}</td>
+          <td>
+            <button class="btn btn-sm btn-primary" (click)="enableEditing(dev)">
+              <i class="fa fa-pencil"></i> Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="deleteDev(dev)">
+              <i class="fa fa-trash"></i> Delete</button>
+          </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="isEditing">
+        <tr>
+          <td colspan="4">
+            <form class="form-inline" #form="ngForm" (ngSubmit)="editDev(dev)">
+              <input class="form-control mr-2" type="text" name="name" [(ngModel)]="dev.name" placeholder="Name" required>
+              <input class="form-control mr-2" type="text" name="imgPerso" [(ngModel)]="dev.imgPerso" placeholder="Img_perso" required>
+              <input class="form-control mr-2" type="text" name="pays" [(ngModel)]="dev.pays" placeholder="Pays" required>
+              <input class="form-control mr-2" type="text" name="descPerso" [(ngModel)]="dev.descPerso" placeholder="Description" required>
+              <input class="form-control mr-2" type="text" name="skills" [(ngModel)]="dev.skills" placeholder="Skills" required>
+              <input class="form-control mr-2" type="text" name="team" [(ngModel)]="dev.team" placeholder="Team" required>
+              <input class="form-control mr-2" type="text" name="descT" [(ngModel)]="dev.descT" placeholder="Desciption team" required>
+              <input class="form-control mr-2" type="text" name="imgTeam" [(ngModel)]="dev.imgTeam" placeholder="Img_team" required>
+              <input class="form-control mr-2" type="number" name="age" [(ngModel)]="dev.age" placeholder="Age" min="0" required>
+              <button class="btn btn-sm btn-primary mr-2" type="submit" [disabled]="!form.form.valid">
+                <i class="fa fa-floppy-o"></i> Save</button>
+              <button class="btn btn-sm btn-warning" (click)="cancelEditing()">
+                <i class="fa fa-times"></i> Cancel</button>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card" *ngIf="!isEditing">
+  <h4 class="card-header">Add new dev</h4>
+  <div class="card-body">
+    <form class="form-inline" [formGroup]="addDevForm" (ngSubmit)="addDev()">
+      <input class="form-control mr-1" type="text" name="name" formControlName="name" placeholder="Name" required>
+      <input class="form-control mr-1" type="text" name="imgPerso" formControlName="imgPerso" placeholder="Img_perso" required>
+      <input class="form-control mr-1" type="text" name="pays" formControlName="pays" placeholder="Pays" required>
+      <input class="form-control mr-1" type="text" name="descPerso" formControlName="descPerso" placeholder="Description" required>
+      <input class="form-control mr-1" type="text" name="skills" formControlName="skills" placeholder="Skills" required>
+      <input class="form-control mr-1" type="text" name="team" formControlName="team" placeholder="Team" required>
+      <input class="form-control mr-1" type="text" name="descT" formControlName="descT" placeholder="Desciption team" required>
+      <input class="form-control mr-1" type="text" name="imgTeam" formControlName="imgTeam" placeholder="Img_team" required>
+      <input class="form-control mr-1" type="number" name="age" formControlName="age" placeholder="Age" min="0" required>
+      <button class="btn btn-primary" type="submit" [disabled]="!addDevForm.valid">
+        <i class="fa fa-floppy-o"></i> Add</button>
+    </form>
+  </div>
+</div>

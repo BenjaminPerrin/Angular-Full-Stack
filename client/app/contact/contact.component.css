@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+body {
+  background: url(https://images.unsplash.com/photo-1465415513839-55341da57a98) no-repeat;
+  background-size: cover;
+}
+
+.contactContainer {
+  margin-top: 50px;
+}
+
+.feedback {
+  background-color: whitesmoke;
+  position: relative;
+  padding: 10px;
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+input textarea {
+  color: #9a0606;
+}
+
+textarea {
+  color: #9a0606;
+}
+
+.feedback form {
+  position: relative;
+}
+
+.feedback label {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+
+.feedback input {
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid #9a0606;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  padding: 0 20px;
+  position: relative;
+  outline: 0;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.feedback input:focus {
+  border: 1px solid #9a0606;
+}
+
+.feedback .error {
+  border-bottom: 2px solid #9a0606;
+  color: #9a0606;
+}
+
+.feedback textarea {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #9a0606;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  height: 130px;
+  margin-top: 10px;
+  padding: 10px 20px 0;
+  width: 100%;
+}
+
+.feedback textarea:focus {
+  border: 1px solid #9a0606;
+}
+
+.feedback .title {
+  margin-top: 0;
+  text-align: center;
+}
+
+.feedback .send {
+  background: linear-gradient(to right, #7e7e7e 0%, #9a0606 100%);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.feedback .send:hover {
+  background: linear-gradient(to right, #7e7e7e 0%, #9a0606 100%);
+}
+
+.contact {
+  background: linear-gradient(to right, #7e7e7e 0%, #9a0606 100%);
+  color: aliceblue;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.contact label {
+  display: none;
+  position: absolute;
+}
+
+.contact .title {
+  padding: 10px;
+  margin-top: 0;
+  text-align: center;
+}
+
+p {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.map {
+  width: 100%;
+  height: 80%;
+}
+
+.maps {
+  text-align: center;
+  background: linear-gradient(to right, #7e7e7e 0%, #9a0606 100%);
+  color: whitesmoke;
+  float: left;
+  background-color: whitesmoke;
+  position: relative;
+  padding: 10px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+agm-map {
+  height: 80%;
+}
