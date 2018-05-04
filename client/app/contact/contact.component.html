@@ -7,10 +7,10 @@
       <p>Mail: GBGDEV@gmail.com</p>
 
       <label for="Ville">city</label>
-      <p>City: Melbourne, FL 32904</p>
+      <p>City: La Loupe City, 28240</p>
 
       <label for="Adresse">Adress</label>
-      <p>Adress : 123 SE 6th St. </p>
+      <p>Adress : 18 Rue de la Gare</p>
 
       <label for="Telephone">phone</label>
       <p>Phone: 05 50 90 75 12</p>
@@ -37,7 +37,10 @@
     </div>
     <div class="col-md-4 col-12 maps">
       <h1>Find us on Google Maps</h1>
-      <img class="map" src="assets/yolo.png" alt="">
+      <agm-map [latitude]="lat" [longitude]="long" [zoom]="16">
+        <agm-marker [latitude]="lat" [longitude]="long" [zoom]="16"></agm-marker>
+        <agm-info-window>La loupe</agm-info-window>
+      </agm-map>
     </div>
   </div>
 </div>

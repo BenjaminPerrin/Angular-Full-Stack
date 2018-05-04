@@ -25,7 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CountdownTimerModule } from 'ngx-countdown-timer';
 import { BracketComponent } from './bracket/bracket.component';
 import { ChallengeComponent } from './challenge/challenge.component';
-
+import { AgmCoreModule } from '@agm/core';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -59,6 +59,10 @@ export function tokenGetter() {
       },
     }),
     CountdownTimerModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDlxSX64DT-Y9bebzAdh7QqKpmBbAKdAxc'
+      ,
+    }),
   ],
   providers: [
     AuthService,
